@@ -1,12 +1,37 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static "css/myStyleSheet.css" %}">
     <title>Index</title>
 </head>
 <body>
 
-    <h1>This is index.html</h1>
-    {{ placeholder }}
+<h1>This is index.html</h1>
+<p>These are the accessed date</p>
+
+<div class="accessDate">
+
+    {% if access_record %}
+
+        <table border="5px">
+            <thead>
+            <th>Access Date</th>
+            <th>Site Name</th>
+            </thead>
+            {% for acc in access_record %}
+                <tr>
+                    <td>{{ acc.date }}</td>
+                    <td>{{ acc.name }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    {% else %}
+        <h1>No access record found</h1>
+    {% endif %}
+
+</div>
 
 </body>
 </html>
