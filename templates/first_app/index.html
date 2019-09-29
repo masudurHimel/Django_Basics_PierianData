@@ -3,13 +3,18 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{% static "css/myStyleSheet.css" %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <title>Index</title>
 </head>
 <body>
+<div>
+    <div class="jumbotron">
+        <h1>This is index.html</h1>
+        <a href="/form">goto /form for form page</a>
 
-<h1>This is index.html</h1>
-<p>These are the accessed date</p>
-
+        <p>These are the accessed date</p>
+    </div>
+</div>
 <div class="accessDate">
 
     {% if access_record %}

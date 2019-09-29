@@ -23,4 +23,5 @@ urlpatterns = [
     path('staticImage/', views.staticTesting, name='staticImage'),
     path('firstApp/', include("first_app.urls")),
     path('admin/', admin.site.urls),
+    path('form/', views.formView, name='form'),
 ]
